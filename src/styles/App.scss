@@ -1,0 +1,74 @@
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 1rem;
+}
+
+h1 {
+  margin: 1.25rem 0;
+}
+
+div,
+p,
+input {
+  margin: 0.75rem 0;
+  padding: .25rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  text-align: center;
+}
+
+.btn {
+  color: $white;
+  border: 1px solid $dark;
+  padding: 8px 32px;
+  margin: 16px;
+}
+
+.primary {
+  color: $white;
+  background-color: $primary;
+  &:hover {
+    background-color: darken($primary, 10%);
+    cursor: pointer;
+  }
+}
+
+.danger {
+  background-color: $error;
+  color: $dark;
+  &:hover {
+    background-color: darken($error, 10%);
+    cursor: pointer;
+  }
+}
+
+.success {
+  background-color: $success;
+  color: $white;
+  &:hover {
+    background-color: darken($success, 10%);
+    cursor: pointer;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}

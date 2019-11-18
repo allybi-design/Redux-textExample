@@ -35,6 +35,7 @@ const Li = styled.li`
 `;
 
 export class App extends Component {
+
   render() {
     return (
       <Wrapper>
@@ -54,7 +55,6 @@ export class App extends Component {
               ))}
           </ul>
         </Column>
-
       </Wrapper>
     );
   }

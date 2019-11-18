@@ -4,17 +4,11 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 import { Provider } from "react-redux";
-import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { createStore, compose, applyMiddleware } from "redux";
+import thunk from "redux-thunk"
+import reducer from "./store/reducers"
 
-import reducer_A from "./store/reducers";
-// import reducer_B from "./store/reducer_B";
-
-const rootReducer = combineReducers({
-  reducerA: reducer_A
-  // reducerB: reducer_B,
-});
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const Enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const logAction = () => {
   return (next) => {
@@ -26,7 +20,7 @@ const logAction = () => {
   };
 };
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(logAction, thunk)));
+const store = createStore(reducer, Enhancers(applyMiddleware(logAction, thunk)));
 
 ReactDOM.render(
   <Provider store={store}>

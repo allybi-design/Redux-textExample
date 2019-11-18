@@ -7,7 +7,7 @@ export const ageUp = (val) => {
     dispatch(loading())
     setTimeout(() => {
       dispatch(ageUpAsync(val));
-    }, 5000);  
+    }, 1000);  
       
   };
 };

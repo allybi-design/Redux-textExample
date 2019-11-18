@@ -15,8 +15,6 @@ export const mapDispatchToProps = (dispatch) => {
     incAge: () => dispatch(ageUp(10)),
     decAge: () => dispatch(ageDown(10)),
     delItem: (id) => dispatch(delItem(id))
-    // incAgeB: () => dispatch({ type: "AGE_UP_B", payload: 20 }),
-    // decAgeB: () => dispatch({ type: "AGE_DOWN_B", payload: 20 }),
-    // delItemB: (id) => dispatch({ type: "DEL_ITEM_B", payload: id})
   };
 };
+

@@ -1,15 +1,5 @@
-export const ageUpAsync = (val) => {
-  return { type: "AGE_UP", payload: val };
-};
-
 export const ageUp = (val) => {
-  return (dispatch) => {
-    dispatch(loading())
-    setTimeout(() => {
-      dispatch(ageUpAsync(val));
-    }, 1000);  
-      
-  };
+  return { type: "AGE_UP", payload: val };
 };
 
 export const ageDown = (val) => {

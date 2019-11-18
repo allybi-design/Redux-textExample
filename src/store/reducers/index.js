@@ -3,7 +3,7 @@ import uuid from "uuid"
 
 export default (state = initState, { type, payload }) => {
   switch (type) {
-    case "AGE_UP":
+    case "AGE_UP_ASYNC":
       return {
         ...state,
         age: state.age + payload,

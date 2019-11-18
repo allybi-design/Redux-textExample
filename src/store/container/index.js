@@ -1,4 +1,4 @@
-import { ageUp, ageDown, delItem } from "../actions";
+import { ageUp ,ageDown, delItem } from "../actions";
 
 import { getAge, getHistory, getIsLoading } from "../selectors"
 
